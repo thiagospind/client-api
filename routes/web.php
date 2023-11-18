@@ -14,5 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    phpinfo();
+    // return view('welcome');
 });
+
+Route::get('/client/{name}', [ClientController::class, 'show']);
